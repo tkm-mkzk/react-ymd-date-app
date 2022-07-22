@@ -5,7 +5,7 @@ function Sample() {
   const [date, setDate] = useState("");
 
   return (
-    <div>
+    <div className="birth-form-wrapper">
       <DateSelect value={date} onChange={setDate} />
     </div>
   );

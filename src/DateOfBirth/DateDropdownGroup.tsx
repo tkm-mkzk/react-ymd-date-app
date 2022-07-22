@@ -20,8 +20,14 @@ const DateDropdownGroup = React.forwardRef<
 >((props, ref) => {
   return (
     <div className="birth-form">
-      <select value={props.yearValue} onChange={props.onYearChange}>
-        <option value="" disabled></option>
+      <select
+        value={props.yearValue}
+        onChange={props.onYearChange}
+        className="year-form"
+      >
+        <option value="" disabled>
+          年
+        </option>
         {props.yearOptions.map(({ value, label }) => (
           <option key={value} value={value}>
             {label}
@@ -32,16 +38,26 @@ const DateDropdownGroup = React.forwardRef<
         value={props.monthValue}
         onChange={props.onMonthChange}
         ref={undefined}
+        className="month-form"
       >
-        <option value="" disabled></option>
+        <option value="" disabled>
+          月
+        </option>
         {props.monthOptions.map(({ value, label }) => (
           <option key={value} value={value}>
             {label}
           </option>
         ))}
       </select>
-      <select value={props.dayValue} onChange={props.onDayChange} ref={ref}>
-        <option value="" disabled></option>
+      <select
+        value={props.dayValue}
+        onChange={props.onDayChange}
+        ref={ref}
+        className="day-form"
+      >
+        <option value="" disabled>
+          日
+        </option>
         {props.dayOptions.map(({ value, label }) => (
           <option key={value} value={value}>
             {label}
